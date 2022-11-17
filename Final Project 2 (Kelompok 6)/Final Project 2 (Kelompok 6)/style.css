@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+.navbar .container a {
+    font-weight: 600;
+    color: #234CAD !important;
+}
+.navbar .menu-bars {
+    padding: 2px 11px 5px 11px;
+    background-color: #F2F6FF;
+}
+.nav-link:hover{
+    transform: scale(1.2);
+background: #F2F6FF;
+}
+.navbar .login-signup .btn {
+    font-weight: 700;
+    width: 95px;
+}
+
+.login-signup #login {
+    color: #234CAD !important;
+    border: 2px #234CAD solid;
+}
+
+.login-signup #login:hover {
+    color: #fff !important;
+    background-color: #234CAD;
+    border: none;
+}
+
+.login-signup #signup {
+    border: none;
+    color: #234CAD !important;
+    background-color: #F2F6FF !important;
+}
+
+.login-signup #signup:hover {
+    color: #fff !important;
+    background-color: #234CAD !important;
+}
+
+.login-signup #user-log {
+  border: none;
+  color: #234CAD !important;
+  background-color: #F2F6FF !important;
+}
+
+.login-signup #logout {
+  border: none;
+  color: #234CAD !important;
+  background-color: #F2F6FF !important;
+}
+
+.login-signup #logout:hover {
+  color: #fff !important;
+  background-color: #234CAD !important;
+}
+
+.jumbotron{
+    margin-bottom: 100px;
+    margin-top: 70px;
+    
+   
+}
+.home .jumbotron .container{
+    border-radius: 4rem;
+    background-color: #F2F6FF;
+}
+.jumbotron1{
+    margin-left: 90px;
+    margin-top: 130px;
+}
+
+.jumbo-text{
+    color: #234CAD;
+}
+
+.img-fluid {
+  margin-top: 30px;
+}
+
+.product_features1{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.container-cardproduct{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.image_features1_a{
+    text-align: center;
+    margin-top: 70px;
+}
+.image_features1_b{
+    text-align: center;
+}
+.image_features1_c{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.text_features1{
+    margin-top: 80px;
+    margin-left: 80px;
+}
+.product .card-product {
+  padding: 118px 0 115px 0;
+}
+.product-feat-2 {
+    margin-top: 150px;
+}
+
+.product .title-feat-2 h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #234CAD;
+}
+
+.product .desc-feat-2 {
+    width: 40%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #234CAD;
+}
+
+.product-feat-2 .features-2 {
+    border-radius: 4rem;
+    background-color: #F2F6FF;
+    margin-top: 100px;
+}
+
+.features-2 img {
+    height: 595px;
+}
+
+.about {
+    margin-top: 200px;
+}
+
+.about-left h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #234CAD;
+}
+
+.about-left p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #234CAD;
+}
+
+.about-left .btn {
+    color: #234CAD !important;
+    border: 2px #234CAD solid;
+    font-weight: 700;
+    width: 150px;
+    height: 47px;
+    margin-top: 20px;
+}
+
+.about-left .btn:hover {
+    background-color: #234CAD !important;
+    color: #fff !important;
+    border: none;
+}
+
+.about .parent .about-right {
+    border-radius: 4rem;
+    background-color: #F2F6FF;
+}
+
+.child-1 .img-about {
+    width: 627px;
+}
+
+.pricing {
+  margin-top: 150px;
+}
+
+.pricing .title-price h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #234CAD;
+}
+
+.pricing .desc-price {
+  width: 35%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #234CAD;
+}
+
+.pricing .card-price-side {
+  border-radius: 4rem;
+  background-color: #F2F6FF;
+}
+
+.pricing .card-price-mid {
+  border-radius: 4rem;
+  border: 3px #234CAD solid;
+}
+
+.pricing h5 {
+  font-size: 25px;
+  font-weight: 400;
+  color: #234CAD;
+}
+
+.pricing h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #234CAD;
+}
+
+.pricing .card-price-side button {
+  background-color: white;
+  width: 165px;
+  height: 55px;
+  color: #234CAD;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.pricing .card-price-mid button {
+  background-color: white;
+  border: 2px #234CAD solid;
+  width: 165px;
+  height: 55px;
+  color: #234CAD;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.pricing button:hover {
+  background: #234CAD !important;
+  border-radius: 4rem;
+  color: #ffffff;
+} 
+
+   .contact {
+  margin-top: 150px;
+}
+
+.contact .container {
+  background-color: #F2F6FF;
+  border-radius: 4rem;
+}
+
+.contact .sec-text {
+  padding-top: 120px;
+}
+
+.contact .title-contact h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #234CAD;
+}
+
+.contact .desc-contact {
+  width: 33%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #234CAD;
+}
+
+.contact .form-floating {
+  position: relative;
+}
+
+.contact .sec-input .mb-5 {
+  margin-bottom: 70px !important;
+}
+
+.contact input {
+  border-radius: 1.2rem;
+  height: 60px !important;
+}
+
+.contact label {
+  color: #234CAD;
+  font-weight: 400;
+  opacity: 50%;
+}
+
+.contact a {
+  position: absolute;
+  bottom: calc(18%);
+  left: calc(88%);
+  background-color: #234CAD;
+  border-radius: 0.7rem;
+}
+
+.contact a:hover {
+  background-color: #234CAD;
+}
+
+.contact a:active {
+  background-color: #142d66 !important;
+}
+
+.contact img {
+  width: 12px;
+  height: 16px;
+}
+
+.contact .icon {
+  color: #fff;
+  font-size: 17px;
+  padding: 15px 2px 15px 2px;
+}
+
+footer {
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.footer h3 {
+  color: #234CAD;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.footer p {
+  font-weight: 400;
+  color: #234CAD;
+  font-size: 18px;
+  width: 50%;
+}
+
+.footer a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #234CAD;
+}
+     

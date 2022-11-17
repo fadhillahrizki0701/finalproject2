@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/hover-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous" />
+
+</head>
+<body onunload="logout()">
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white sticky-top" id="demo1Navbar">
+        <div class="container pt-3 pb-3" style="background-color: #FFFFFF;">
+            <a class="navbar-brand ps-1 text-dark fw-bold fs-3" href="#" data-value="home">
+            <span class="rounded-circle menu-bars">
+                <img src="./gambar/menu-btn.svg" style="width: 18px; height: 9px" alt="menu-btn">
+            </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul id="navbar" class="navbar-nav mx-auto">
+                <li class="nav-item mx-3">
+                <a class="nav-link from-center active" href="#home" data-value="home">Home</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link from-center" href="#product" data-value="product">Product</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link from-center" href="#about" data-value="about">About</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link from-center" href="#contact" data-value="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="login-signup">
+              <div id="loggedOut">
+                <button type="button" id="login" class="btn rounded-pill me-3" data-bs-toggle="modal" data-bs-target="#signInModal">Login</button>
+                <button type="button" id="signup" class="btn rounded-pill ms-3" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign up</button>
+              </div>
+              <div id="loggedIn" style="display: none">
+                <button type="button" id="user-log" class="btn rounded-pill ms-2" disabled></button>
+                <button type="button" id="logout" class="btn rounded-pill ms-2" onclick="signOut()">Logout</button>
+              </div>
+              </div>
+            </div>
+        </div>
+    </nav>
+</header>
+  
+<!-- #home-->
+<section class="home" id="home"> 
+  <div class="jumbotron">
+      <div class="container "  >
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="jumbotron1">
+                      <h1 class="jumbo-text">Business</h1>
+                      <h1 class="jumbo-text">Communications</h1>
+                      <h1 class="jumbo-text">Reinvented</h1>
+                      <p class="jumbo-text">Start communicating with your business<br>team more efficiently with our app</p>
+                      <button type="button" class="btn btn-outline-primary rounded-pill"> Get the app </button>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="jumbotron2">
+                      <img src="./gambar/jumbotron.svg" class="img-fluid" alt="banner">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+  <div class="container" style="background-color: #FFFFFF;">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="./gambar/product1.svg" class="img-fluid" alt="banner">
+        </div>
+        <div class="col-sm-6">
+            <img src="./gambar/product2.svg" class="img-fluid" alt="banner">
+        </div>
+    </div>
+</div>
+  
+<!-- #product1-->
+<section class="product" id="product"> 
+    <div class="product_features1">
+        <div class="container" style="background-color: #FFFFFF;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="container-cardproduct" style="border: none; background-color: #F2F6FF; border-radius: 40px;">
+                        <div class="image_features1_a">
+                            <img src="./gambar/chat1.svg" alt="">
+                        </div>
+                        <br>
+                        <div class="image_features1_b">
+                            <img src="./gambar/chat2.svg" alt="">
+                        </div>
+                        <br>
+                        <div class="image_features1_c">
+                            <img src="./gambar/chat3.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text_features1">
+                        <h1 class="jumbo-text">Use our app to  </h1>
+                        <h1 class="jumbo-text">send messages</h1>
+                        <h1 class="jumbo-text">to your team</h1>
+                        <br>
+                        <p class="jumbo-text">
+                            We offer really easy communications for <br> all businesses from small to large
+                        </p>
+                        <br>
+                        <button type="button" class="btn btn-outline-primary rounded-pill"> Get the app </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <form class="signin-form" onsubmit="return validasiSignIn()">
+          <h1 class="text-center">Login</h1>
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" required>
+            <div class="invalid-feedback">Format email tidak sesuai!</div>
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" required>
+            <div class="invalid-feedback">Harus diisi!</div>
+            <div class="form-label pt-2">
+              Belum mempunyai akun? <a href="#" data-bs-target="#signUpModal" data-bs-toggle="modal">Daftar</a>
+            </div>
+          </div>
+          <button onclick="simpanLogin()" type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModal" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <form class="signup-form" name="signup-form" onsubmit="return validasiSignUp()">
+          <h1 class="text-center">Sign Up</h1>
+          <div class="mb-3">
+            <label for="signUpUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="signUpUsername">
+          </div>
+          <div class="mb-3">
+            <label for="signUpEmail" class="form-label" >Email address</label>
+            <input type="email" class="form-control" id="signUpEmail" >
+          </div>
+          <div class="mb-3">
+            <label for="signUpPassword1" class="form-label" >Password</label>
+            <input type="password" class="form-control" id="signUpPassword1" >
+          </div>
+          <div class="mb-3">
+            <label for="signUpPassword2" class="form-label" >Re-type Password</label>
+            <input type="password" class="form-control" id="signUpPassword2">
+            
+            <div class="form-label pt-2">
+              Sudah mempunyai akun? <a href="#" data-bs-target="#signInModal" data-bs-toggle="modal" >Masuk</a>
+            </div>
+          </div>
+          <button onclick="simpanSignup()"  type="submit" class="btn btn-primary w-100" > Submit </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- #product2 -->
+
+<div class="product-feat-2">
+    <div class="row d-flex justify-content-center">
+      <div class="title-feat-2">
+        <h2 class="text-center">Transform your communications</h2>
+      </div>
+      <div class="desc-feat-2 mt-3">
+        <p class="text-center text-wrap">Our mobile app is the only thing you need to change the way you communicate to your team</p>
+      </div>
+    </div>
+    <div class="container mb-5">
+    <div class="row features-2">
+      <img src="gambar/features.svg" class="py-5" alt="features-2">
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="about" class="about">
+<div class="container my-5 parent">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center about-left">
+      <div class="container d-flex align-items-center">
+        <div class="row mx-5">
+          <div class="col p-4 m-4">
+            <h2 class="text-wrap">Increase the efficiency within your company</h2>
+            <p class="text-wrap pt-4">Our app is the great way for you to start getting more tasks done</p>
+            <button type="button" class="btn btn-outline-primary rounded-pill mt-4" > Get the app </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 about-right">
+      <div class="container child-1">
+        <div class="row">
+          <img src="gambar/about.svg" class="ms-4 img-about" alt="about-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  <div class="container pricing mb-5">
+    <div class="row d-flex justify-content-center">
+      <div class="title-price">
+        <h1 class="text-center">Explore our simple pricing</h1>
+      </div>
+      <div class="desc-price mt-3">
+        <p class="text-center text-wrap">We offer one of the most competitive prices on the market for everyone</p>
+      </div>
+      <div class="row gy-3 mt-5 pt-1">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="container px-5 card-price-side d-flex justify-content-center align-items-center">
+            <div class="row p-5">
+              <div class="col">
+                <h5 class="text-center">Basic</h5>
+                <h1 class="text-center pt-4">&#36;9</h1>
+                <p class="text-center pt-2">Per month</p>
+                <button type="button" class="btn rounded-pill mt-3"> Learn more </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="container card-price-mid d-flex justify-content-center align-items-center">
+            <div class="row p-5">
+              <div class="col">
+                <h5 class="text-center">Premium</h5>
+                <h1 class="text-center pt-4">&#36;29</h1>
+                <p class="text-center pt-2">Per month</p>
+                <button type="button" class="btn rounded-pill mt-3" > Get started </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="container px-5 card-price-side d-flex justify-content-center align-items-center">
+            <div class="row p-5">
+              <div class="col">
+                <h5 class="text-center">Enterprise</h5>
+                <h1 class="text-center pt-4">&#36;129</h1>
+                <p class="text-center pt-2">Per month</p>
+                <button type="button" class="btn rounded-pill mt-3"> Learn more </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact mb-5 d-flex justify-content-center" id="contact">
+    <div class="container">
+      <div class="row sec-text d-flex justify-content-center">
+        <div class="title-contact mb-1">
+          <h2 class="text-center">Sign up to our newsletter</h2>
+        </div>
+        <div class="desc-contact mt-4">
+          <p class="text-center text-wrap">Receive latest news, updates, discounts, and many other things every week</p>
+        </div>
+      </div>
+      <div class="row sec-input d-flex justify-content-center pt-4">
+        <div class="col-lg-5 col-md-5 col-sm-12 mb-5">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <label for="floatingInput">Enter your email address</label>
+            <a class="btn hvr-icon-wobble-horizontal">
+              <img src="gambar/send.svg" class="hvr-icon" alt="send-icon">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <h3>Startup.io</h3>
+          <p class="text-wrap mt-4">&copy; 2020 All rights reserved</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12">
+          <h3 class="title-sm fw-bold">Product</h3>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2">
+              <a href="#" data-value="home" >Benefits</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" data-value="about" >Feedback</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" data-value="blog" >Features</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12">
+          <h3 class="title-sm fw-bold">About</h3>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2">
+              <a href="#" data-value="home" >Company</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" data-value="about" >Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12">
+          <h3 class="title-sm fw-bold">Support</h3>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2">
+              <a href="#" data-value="home" >Get help</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" data-value="about" >Terms of service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="signUp.js"></script>
+  <script src="signIn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> 
+
+</body>
+</html>
+
